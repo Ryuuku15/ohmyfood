@@ -1,0 +1,92 @@
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+main {
+  padding-top: 60px;
+}
+
+.restaurant-nav h1 {
+  padding-left: 25px;
+  font-size: 23px;
+}
+
+@media (min-width: 768px) {
+  .restaurant-nav h1 {
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav_item {
+    display: flex;
+    flex-position: row;
+    justify-content: center;
+  }
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: row;
+  padding-left: 0px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  color: black;
+  list-style: none;
+  margin-top: 30px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+  width: 77%;
+  justify-self: center;
+  background-color: #F6F6F6;
+}
+
+@media (min-width: 768px) {
+  .nav-items {
+    width: 23%;
+    margin-right: 45px;
+  }
+}
+
+.nav-items .nav-number {
+  border: 1px transparent;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 20px;
+  position: absolute;
+  left: -17px;
+}
+
+.nav-items .nav-number2 {
+  border: 1px transparent;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 20px;
+  position: absolute;
+  right: 55px;
+}
+
+.nav-items .fa-solid {
+  font-size: 27px;
+  color: grey;
+}
+
+.nav-items .fa-solid:hover {
+  color: #9356DC;
+}
+
+.nav-items h3 {
+  padding-left: 25px;
+  font-size: 19px;
+  font-weight: 400;
+}

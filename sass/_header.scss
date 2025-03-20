@@ -1,0 +1,64 @@
+@import "_mixins.scss";
+
+
+header {
+
+    
+    
+      .loader-wrapper {
+        position: fixed;       /* On se fixe à la fenêtre */
+        top: 0;
+        left: 0;
+        width: 100vw;          /* On prend toute la largeur de la fenêtre */
+        height: 100vh;         /* ... et toute la hauteur */
+        background-color:$tertiary-color;
+        display: flex;         /* Pour centrer la roue */
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;         /* Devant tout autre élément */
+      
+        /* On crée une animation qui va faire disparaître le conteneur au bout de X secondes */
+        /* Durée d'animation: 1s | Délai avant de commencer l'animation: 2s */
+        animation: fadeOut 1s ease 2s forwards;
+      }
+      
+      /* -- LA ROUE (spinner) -- */
+      .loader {
+        /* Anneau : large bord clair, dessus coloré, cercle arrondi */
+        border: 16px solid #f3f3f3;         /* Gris clair */
+        border-top: 16px solid $primary-color;     /* Couleur d'accent */
+        border-radius: 50%;                /* Cercle */
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite; /* Tourne sur lui-même */
+      }
+      
+      /* -- L'ANIMATION de rotation du loader -- */
+      @keyframes spin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* -- L'ANIMATION qui fait disparaître le conteneur loader-wrapper -- */
+      @keyframes fadeOut {
+        100% {
+          opacity: 0;           /* On rend transparent */
+          visibility: hidden;   /* Pour ne plus le voir/sélectionner */
+        }
+      }
+    
+    @include logo();
+    @include container();
+
+    .header-nav{
+        @include logo();
+        width: 100%;
+        background-color: $quaternary-color;
+        box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.2), 0px -2px 7px rgba(0, 0, 0, 0.2);
+        height: 60px;
+
+        i{
+            padding-right: 20px;
+        }
+    }
+}

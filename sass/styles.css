@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+header {
+  /* -- LA ROUE (spinner) -- */
+  /* -- L'ANIMATION de rotation du loader -- */
+  /* -- L'ANIMATION qui fait disparaître le conteneur loader-wrapper -- */
+  display: flex;
+  font-family: "shrikhand", cursive;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header .loader-wrapper {
+  position: fixed; /* On se fixe à la fenêtre */
+  top: 0;
+  left: 0;
+  width: 100vw; /* On prend toute la largeur de la fenêtre */
+  height: 100vh; /* ... et toute la hauteur */
+  background-color: #99E2D0;
+  display: flex; /* Pour centrer la roue */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Devant tout autre élément */
+  /* On crée une animation qui va faire disparaître le conteneur au bout de X secondes */
+  /* Durée d'animation: 1s | Délai avant de commencer l'animation: 2s */
+  animation: fadeOut 1s ease 2s forwards;
+}
+header .loader {
+  /* Anneau : large bord clair, dessus coloré, cercle arrondi */
+  border: 16px solid #f3f3f3; /* Gris clair */
+  border-top: 16px solid #9356DC; /* Couleur d'accent */
+  border-radius: 50%; /* Cercle */
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; /* Tourne sur lui-même */
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0; /* On rend transparent */
+    visibility: hidden; /* Pour ne plus le voir/sélectionner */
+  }
+}
+header .header-nav {
+  display: flex;
+  font-family: "shrikhand", cursive;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #EAEAEA;
+  box-shadow: 1px 5px 7px rgba(0, 0, 0, 0.2), 0px -2px 7px rgba(0, 0, 0, 0.2);
+  height: 60px;
+}
+header .header-nav i {
+  padding-right: 20px;
+}
+
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #F6F6F6;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+.hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .hero .hero-text .formobile {
+    display: none;
+  }
+}
+.hero .hero-text h1 {
+  margin-bottom: 30px;
+}
+.hero .hero-text p {
+  font-size: 15px;
+  padding-bottom: 40px;
+}
+.hero .hero-text .button-primary {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  color: white;
+  padding: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  align-self: center;
+  justify-self: center;
+  padding: 20px;
+  margin-bottom: 60px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.hero .hero-text .button-primary:hover:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  transition: background 0.4s;
+}
+
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+main {
+  padding-top: 60px;
+}
+
+.restaurant-nav h1 {
+  padding-left: 25px;
+  font-size: 23px;
+}
+@media (min-width: 768px) {
+  .restaurant-nav h1 {
+    margin-left: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav_item {
+    display: flex;
+    flex-position: row;
+    justify-content: center;
+  }
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  flex-direction: row;
+  padding-left: 0px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  color: black;
+  list-style: none;
+  margin-top: 30px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+  width: 77%;
+  justify-self: center;
+  background-color: #F6F6F6;
+}
+@media (min-width: 768px) {
+  .nav-items {
+    width: 23%;
+    margin-right: 45px;
+  }
+}
+.nav-items .nav-number {
+  border: 1px transparent;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 20px;
+  position: absolute;
+  left: -17px;
+}
+.nav-items .nav-number2 {
+  border: 1px transparent;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px;
+  padding-left: 9px;
+  padding-right: 9px;
+  border-radius: 20px;
+  position: absolute;
+  right: 55px;
+}
+.nav-items .fa-solid {
+  font-size: 27px;
+  color: grey;
+}
+.nav-items .fa-solid:hover {
+  color: #9356DC;
+}
+.nav-items h3 {
+  padding-left: 25px;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+/** Main section*/
+/** Main restaurant card*/
+/** Main restaurant card end*/
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  footer {
+    align-content: center;
+  }
+}
+footer .footer-nav {
+  width: 100%;
+  background-color: var(--Grey, #353535);
+  padding-bottom: 30px;
+}
+@media (min-width: 768px) {
+  footer .footer-nav {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+  }
+}
+footer .footer-nav h1 {
+  font-size: 20px;
+}
+footer .footer-nav .footer-logo {
+  display: flex;
+  font-family: "shrikhand", cursive;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  font-size: 20px;
+  font-size: 16px;
+  background: var(--Grey, #353535);
+  justify-self: flex-start;
+}
+@media (min-width: 768px) {
+  footer .footer-nav .footer-logo {
+    padding: 0px;
+    padding-left: 50px;
+    padding-right: 70px;
+    margin: 0px;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-nav .Footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px 0px 15px;
+    align-self: center;
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer-nav .Footer-items-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px 0px 15px;
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}
+footer .footer-nav li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+footer .footer-nav li i {
+  padding-right: 10px;
+}
+
+.restaurant {
+  background-color: #F6F6F6;
+  padding-top: 50px;
+  margin-top: 70px;
+  padding-bottom: 50px;
+}
+
+.section-title {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .section-title {
+    padding-left: 7%;
+  }
+}
+
+@media (min-width: 768px) {
+  .restaurant-card-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+}
+.restaurant-card-items a {
+  text-decoration: none;
+}
+.restaurant-card-items a .pop-up-text {
+  text-decoration: none;
+  background-color: #99E2D0;
+  color: green;
+  position: relative;
+  top: -180px;
+  right: -130px;
+  padding: 7px;
+}
+@media (min-width: 768px) {
+  .restaurant-card-items a {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+}
+.restaurant-card-items a .card {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  width: 90%;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.restaurant-card-items a .card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0px 0px;
+}
+.restaurant-card-items a .card-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.restaurant-card-items a .card-content .card-txt {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: black;
+  padding-top: 20px;
+  justify-items: flex-start;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  width: 70%;
+}
+.restaurant-card-items a .card-content .card-txt p {
+  font-size: 18px;
+  padding-top: 10px;
+  font-weight: normal;
+}
+.restaurant-card-items a .card-content .card-icon {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
+}
+.restaurant-card-items a .card-content .card-icon i {
+  font-size: 27px;
+  position: relative;
+  display: inline-block;
+  color: black;
+  height: -moz-min-content;
+  height: min-content;
+  border-radius: 100%;
+}
+.restaurant-card-items a .card-content .card-icon i:hover {
+  color: #9356DC;
+  /* ajout de la couleur de fond coeur*/
+}
+.restaurant-card-items a .card-content .card-icon i:hover::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-nav-palette {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 10px;
+  justify-self: center;
+}
+.header-nav-palette .header-nav-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+  font-size: 26px;
+  justify-content: start;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  right: -25px;
+  width: 10%;
+}
+
+.restaurant-menues {
+  border-radius: 35px;
+  background-color: #F6F6F6;
+  position: relative;
+  top: -35px;
+}
+@media (min-width: 768px) {
+  .restaurant-menues {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-self: center;
+  }
+}
+
+.logo-container {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-logo-container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-picture img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .hero-picture img {
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.restaurant-name {
+  display: flex;
+  font-family: "shrikhand", cursive;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  margin-top: 0px;
+  padding-top: 35px;
+}
+@media (min-width: 768px) {
+  .restaurant-name {
+    justify-content: center;
+  }
+}
+.restaurant-name i {
+  font-size: 35px;
+  padding-left: 35px;
+}
+
+.menu-titre a {
+  text-decoration: none;
+  color: black;
+}
+
+.text-entree {
+  display: flex;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 25px;
+  margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .text-entree {
+    justify-content: center;
+    width: 60%;
+  }
+}
+.text-entree h3 {
+  border-bottom: solid rgb(17, 207, 166);
+  width: 45px;
+}
+@media (min-width: 768px) {
+  .text-entree h3 {
+    justify-self: start;
+  }
+}
+
+.menu-titre {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.menu-item {
+  display: flex;
+  justify-self: center;
+  flex-direction: row;
+  margin-bottom: 15px;
+  width: 87%;
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px -10px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 0px 20px 20px;
+}
+@media (min-width: 768px) {
+  .menu-item {
+    width: 60%;
+  }
+}
+.menu-item h2 {
+  font-size: 19px;
+  font-weight: bold;
+}
+.menu-item p {
+  font-size: 15px;
+  padding-right: 10px;
+}
+.menu-item .menu-item-text {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.menu-item .menu-price {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+  align-items: end;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero .button-primary {
+  width: 62%;
+}
+@media (min-width: 768px) {
+  .hero .button-primary {
+    width: 26%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=styles.css.map */

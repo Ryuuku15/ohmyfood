@@ -1,0 +1,65 @@
+@import "_mixins.scss";
+
+main{
+    padding-top: 60px;
+}
+
+.restaurant-nav{
+   
+    h1{
+        padding-left: 25px;
+        font-size:23px;
+        @media (min-width: 768px){
+            margin-left: 5%;
+        }
+    }
+
+}
+
+.nav_item{
+    @media (min-width: 768px){
+        display: flex;
+        flex-position: row;
+        justify-content: center;
+        
+        
+    }
+}
+.nav-items {
+    @include nav-items();
+    @media (min-width: 768px){
+        width: 23%;
+        margin-right: 45px;
+    }
+
+  
+    
+   
+
+    .nav-number{
+        @include nav-number();
+        
+    }
+
+    .nav-number2{
+        @include nav-number2();
+    }
+
+    .fa-solid{
+        font-size: 27px;
+        color:grey;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+   
+    
+    h3{
+        padding-left: 25px;
+        font-size: 19px;
+        font-weight:400;
+    }
+
+ 
+}

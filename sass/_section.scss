@@ -1,0 +1,65 @@
+@import "_mixins.scss";
+
+
+.hero{
+    @include container();
+  @include font-roboto();
+  background-color: $quinary-color;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  
+
+   .hero-text{
+    @include container();
+    text-align: center;
+    padding-bottom: 30px ;
+
+    @media (min-width: 768px){
+      .formobile{
+        display: none;
+      }
+    }
+
+    h1{
+      margin-bottom: 30px;
+    }
+
+    p{
+        font-size: 15px;
+        padding-bottom: 40px;
+        
+        
+        
+
+    }
+
+  .button-primary{
+    @include button();
+    padding: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      &:hover::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; // pour ne pas gêner le hover
+    
+        // gradient translucide
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0)   0%,
+          rgba(255, 255, 255, 0.2) 50%,  
+          rgba(255, 255, 255, 0)   100% );
+        transition: background 0.4s; 
+      }
+      
+    }
+
+ 
+
+  }
+  }  
+}

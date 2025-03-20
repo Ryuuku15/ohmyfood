@@ -1,0 +1,99 @@
+
+.restaurant{
+    background-color: $quinary-color;
+    padding-top: 50px;
+    margin-top: 70px;
+    padding-bottom: 50px;
+}
+.section-title{
+    padding-left: 30px;
+    padding-bottom: 30px;
+    @include font-roboto();
+     justify-content: flex-start;
+    font-size:16px;
+    
+    @media (min-width: 768px){
+        padding-left: 7%;
+    }
+
+    
+}
+.restaurant-card-items{
+
+    @media (min-width: 768px){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+    }
+  
+    a{
+       text-decoration: none;
+
+
+       .pop-up-text{
+        text-decoration: none;
+        background-color: $tertiary-color;
+        color: green;
+        position: relative;
+        top: -180px;
+        right: -130px;
+        padding:7px;
+       }
+       
+    @media (min-width: 768px){
+        width: 80%;
+        margin-bottom: 10px;
+        
+    }
+      
+
+       .card{
+        @include card();
+        
+       
+        img{
+            @include card-image();
+        }
+
+       }
+       
+       .card-content{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        
+
+       .card-txt{
+       @include card-text-style();
+
+          
+           
+           p{
+               font-size: 18px;
+               padding-top: 10px;
+               font-weight:normal;
+           }
+       }
+
+
+       .card-icon{
+              @include card-icon-style();
+              
+
+           
+        i{
+            @include hover-icon-index($primary-color);
+            color: black;
+            height: min-content;
+            border-radius: 100%;
+            
+        }
+
+
+
+
+         }
+       }
+    }    
+}   
