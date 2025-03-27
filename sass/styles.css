@@ -427,6 +427,16 @@ footer .footer-nav li i {
 .restaurant-card-items a .card-content .card-icon i:hover {
   color: #9356DC;
 }
+.restaurant-card-items a .card-content .card-icon i:hover::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
 
 body {
   width: 100%;
