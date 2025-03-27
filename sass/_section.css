@@ -39,6 +39,7 @@
 }
 
 .hero .hero-text .button-primary {
+  position: relative;
   border-radius: 30px;
   display: flex;
   justify-content: center;

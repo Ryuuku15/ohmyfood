@@ -236,7 +236,6 @@ justify-self: center;
    &:hover{
          color: $primary-color;
 
-         /* ajout de la couleur de fond coeur*/
          &::before {
             content: "\f004";             
             font-family: "Font Awesome 6 Free";
@@ -249,6 +248,8 @@ justify-self: center;
             
             
          }        
+      
+        
             
    }
 }
