@@ -92,15 +92,15 @@ $quinary-color:#F6F6F6;
 
 
 @mixin button(){
-   border-radius: 30px;
+   border-radius: 90px;
    display: flex;
    justify-content: center;
    align-items: center;
    @include linear-gradient();
    color: white;
-   padding:15px;
+   padding: 20px;
    font-family: Roboto, sans-serif;
-font-size: 16px;
+font-size: 30px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -124,7 +124,7 @@ justify-self: center;
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 30px;
+   padding: 25px;
    @include font-roboto();
    flex-direction: row;
    padding-left: 0px;

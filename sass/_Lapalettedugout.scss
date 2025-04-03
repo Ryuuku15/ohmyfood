@@ -200,11 +200,44 @@ body{
 }
 
 .hero .button-primary{
-    width: 62%;
+   
     
     @media (min-width: 768px){
-        width: 26%;
+        
     }
    
 }
 
+@keyframes expandAndFade {
+    0% {
+    max-height: 0;
+     opacity: 0;
+    }
+    100% {
+      max-height:400px;
+      opacity: 1;
+    }
+  }
+
+  .entree,
+  .menu,
+  .dessert {
+    max-height: 0;
+    opacity: 0;
+          /* Important pour masquer le contenu quand max-height est 0 */
+   /* Juste pour visualiser la zone */
+    padding: 10px;
+  }
+
+  .entree {
+    animation: expandAndFade 2s ease forwards;
+    animation-delay: 0s;  
+  }
+  .menu {
+    animation: expandAndFade 2s ease forwards;
+    animation-delay: 2s;  
+  }
+  .dessert {
+    animation: expandAndFade 2s ease forwards;
+    animation-delay: 4s;
+  }

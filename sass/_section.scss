@@ -22,23 +22,24 @@
 
     h1{
       margin-bottom: 30px;
+      font-weight: 900;
+      font-size: 40px;
     }
 
     p{
-        font-size: 15px;
+        font-size: 20px;
         padding-bottom: 40px;
-        
-        
-        
-
+        @include font-roboto;
+        font-weight: normal;
     }
 
   .button-primary{
     position: relative;
     @include button();
-    padding: 20px;
-    margin-bottom: 60px;
+    padding: 18px 23px 18px 23px;
+    margin-bottom: 15px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    
 
   
     &:hover {
